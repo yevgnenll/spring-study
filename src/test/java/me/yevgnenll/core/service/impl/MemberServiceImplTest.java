@@ -3,15 +3,24 @@ package me.yevgnenll.core.service.impl;
 import static org.junit.jupiter.api.Assertions.*;
 
 import static org.assertj.core.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import me.yevgnenll.core.AppConfig;
 import me.yevgnenll.core.member.Grade;
 import me.yevgnenll.core.member.Member;
 import me.yevgnenll.core.service.MemberService;
 
 class MemberServiceImplTest {
 
-  MemberService memberService = new MemberServiceImpl();
+  MemberService memberService;
+
+  @BeforeEach
+  public void beforeEach() {
+    AppConfig appConfig = new AppConfig();
+    memberService = appConfig.memberService();
+  }
 
   @Test
   void join() {

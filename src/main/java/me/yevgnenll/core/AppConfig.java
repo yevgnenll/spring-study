@@ -12,6 +12,10 @@ import me.yevgnenll.core.service.impl.MemberServiceImpl;
 import me.yevgnenll.core.service.impl.OrderServiceImpl;
 
 
+/**
+ * factory methods
+ * 외부에서 method 를 호출해서 생성된다.
+ */
 @Configuration
 public class AppConfig {
 

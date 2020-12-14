@@ -1,9 +1,11 @@
 package me.yevgnenll.core.beanfind;
 
 import static org.assertj.core.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -33,10 +35,19 @@ public class ApplicationTextBasicFindText {
   }
 
   @Test
-  @DisplayName("구체 type 으로 조회")
+  @DisplayName("이름 없이 구체 type 으로 조회")
   void findBeanByTypeImpl() {
-    MemberService memberService = ac.getBean("memberService", MemberServiceImpl.class);
+    // 이건 좋은 방법이 아니다 추상에만 의존해야 하는데 이건 구현에 의존한다
+    // 하지만 이러한 테스트를 해볼 필요가 있다
+    MemberService memberService = ac.getBean(MemberServiceImpl.class);
     assertThat(memberService).isInstanceOf(MemberServiceImpl.class);
+  }
+
+  @Test()
+  @DisplayName("빈 이름으로 조회시 결과가 없을때")
+  void findByBeanNameX() {
+    assertThrows(NoSuchBeanDefinitionException.class,
+        () -> ac.getBean("xxx", MemberService.class));
   }
 
 }

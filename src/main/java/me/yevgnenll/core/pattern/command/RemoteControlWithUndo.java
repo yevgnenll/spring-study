@@ -2,6 +2,9 @@ package me.yevgnenll.core.pattern.command;
 
 import me.yevgnenll.core.pattern.command.impl.NoCommand;
 
+/**
+ * Invoker with Undo
+ */
 public class RemoteControlWithUndo extends RemoteControl {
 
   private Command undoCommand;

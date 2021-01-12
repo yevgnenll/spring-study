@@ -7,8 +7,8 @@ import me.yevgnenll.core.pattern.command.impl.NoCommand;
  */
 public class RemoteControl {
 
-  private Command[] onCommands;
-  private Command[] offCommands;
+  protected Command[] onCommands;
+  protected Command[] offCommands;
 
   public RemoteControl() {
     onCommands = new Command[7];

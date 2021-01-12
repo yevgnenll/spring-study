@@ -2,19 +2,17 @@ package me.yevgnenll.core.pattern.command;
 
 import lombok.RequiredArgsConstructor;
 
-/**
- * Receiver
- */
 @RequiredArgsConstructor
-public class Light {
+public class CeilingFan {
 
   private final String name;
 
   public void on() {
-    System.out.println(name + " turn on light");
+    System.out.println(name + " celling fan on is high");
   }
 
   public void off() {
-    System.out.println(name + " turn off light");
+    System.out.println(name + " celling fan off!");
   }
+
 }

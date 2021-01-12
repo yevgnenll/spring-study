@@ -1,18 +1,16 @@
 package me.yevgnenll.core.pattern.command;
 
-import me.yevgnenll.core.pattern.command.impl.LightCommand;
+import me.yevgnenll.core.pattern.command.impl.LightOnCommand;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SimpleRemoteControlTest {
 
   @Test
   void remoteControlTest() {
     SimpleRemoteControl remote = new SimpleRemoteControl();
-    Light light = new Light();
+    Light light = new Light("light");
     // command 객체
-    LightCommand lightOn = new LightCommand(light);
+    LightOnCommand lightOn = new LightOnCommand(light);
 
     remote.setSlot(lightOn);
     remote.buttonWasPressed();

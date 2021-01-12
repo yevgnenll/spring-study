@@ -3,9 +3,9 @@ package me.yevgnenll.core.weather;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import me.yevgnenll.core.pattern.impl.CurrentConditionDisplay;
-import me.yevgnenll.core.pattern.impl.StatisticsDisplay;
-import me.yevgnenll.core.pattern.impl.WeatherData;
+import me.yevgnenll.core.pattern.observer.impl.CurrentConditionDisplay;
+import me.yevgnenll.core.pattern.observer.impl.StatisticsDisplay;
+import me.yevgnenll.core.pattern.observer.impl.WeatherData;
 
 public class WeatherTest {
 

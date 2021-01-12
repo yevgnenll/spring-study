@@ -1,8 +1,8 @@
-package me.yevgnenll.core.pattern.impl;
+package me.yevgnenll.core.pattern.observer.impl;
 
-import me.yevgnenll.core.pattern.DisplayElement;
-import me.yevgnenll.core.pattern.Observer;
-import me.yevgnenll.core.pattern.Subject;
+import me.yevgnenll.core.pattern.observer.DisplayElement;
+import me.yevgnenll.core.pattern.observer.Observer;
+import me.yevgnenll.core.pattern.observer.Subject;
 
 public class CurrentConditionDisplay implements Observer, DisplayElement {
 

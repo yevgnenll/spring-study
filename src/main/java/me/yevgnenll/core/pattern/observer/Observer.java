@@ -1,4 +1,4 @@
-package me.yevgnenll.core.pattern;
+package me.yevgnenll.core.pattern.observer;
 
 public interface Observer {
   void update(float temp, float humidity, float pressure);

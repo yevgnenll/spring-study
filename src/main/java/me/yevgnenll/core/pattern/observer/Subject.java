@@ -1,4 +1,4 @@
-package me.yevgnenll.core.pattern;
+package me.yevgnenll.core.pattern.observer;
 
 public interface Subject {
   void registerObserver(Observer o);

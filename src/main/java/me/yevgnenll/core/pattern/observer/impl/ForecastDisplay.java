@@ -1,11 +1,9 @@
-package me.yevgnenll.core.pattern.impl;
+package me.yevgnenll.core.pattern.observer.impl;
 
-import me.yevgnenll.core.pattern.DisplayElement;
-import me.yevgnenll.core.pattern.Observer;
+import me.yevgnenll.core.pattern.observer.DisplayElement;
+import me.yevgnenll.core.pattern.observer.Observer;
 
 public class ForecastDisplay implements Observer, DisplayElement {
-
-
 
   @Override
   public void display() {

@@ -1,11 +1,11 @@
-package me.yevgnenll.core.pattern.iterator;
+package me.yevgnenll.core.pattern.composite;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @Getter
 @RequiredArgsConstructor
-public class MenuItem {
+public class MenuItem extends MenuComponent {
 
     private final String name;
     private final String description;

@@ -1,4 +1,4 @@
-package me.yevgnenll.core.pattern.iterator;
+package me.yevgnenll.core.pattern.composite;
 
 public abstract class MenuComponent {
   public void add(MenuComponent menuComponent) {

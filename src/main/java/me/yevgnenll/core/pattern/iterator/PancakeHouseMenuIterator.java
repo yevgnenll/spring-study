@@ -9,18 +9,18 @@ public class PancakeHouseMenuIterator <T extends MenuItem> implements Iterator<T
     private int position;
 
     public PancakeHouseMenuIterator(List<T> items) {
-        breakfasts = items;
+      breakfasts = items;
     }
 
     @Override
     public boolean hasNext() {
-        return position < breakfasts.size();
+      return position < breakfasts.size();
     }
 
     @Override
     public T next() {
-        T object = breakfasts.get(position);
-        position = position + 1;
-        return object;
+      T object = breakfasts.get(position);
+      position = position + 1;
+      return object;
     }
 }

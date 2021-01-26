@@ -3,35 +3,29 @@ package me.yevgnenll.core.pattern.iterator;
 import lombok.AllArgsConstructor;
 
 import java.util.Iterator;
+import java.util.List;
 
 @AllArgsConstructor
 public class Waitress {
 
-    private Menu pancakeHouseMenu;
-    private Menu dinerMenu;
-    private Menu caffeMenu;
+  private List<Menu> menus;
 
-    public void printMenu() {
+  public void printMenu() {
+    Iterator<Menu> menuIter = menus.iterator();
 
-      Iterator<MenuItem> pancakeIterator = pancakeHouseMenu.createIterator();
-      Iterator<MenuItem> dinerIterator = dinerMenu.createIterator();
-      Iterator<MenuItem> dinnerIterator = caffeMenu.createIterator();
-
-      System.out.println("MENU\n----\nBREAKFAST");
-      printMenu(pancakeIterator);
-      System.out.println("\nLUNCH");
-      printMenu(dinerIterator);
-      System.out.println("\nDinner");
-      printMenu(dinnerIterator);
+    while(menuIter.hasNext()) {
+      Menu menu = menuIter.next();
+      printMenu(menu.createIterator());
     }
+  }
 
-    private void printMenu(Iterator iterator) {
-      while (iterator.hasNext()) {
-        MenuItem menuItem = (MenuItem) iterator.next();
-        System.out.print(menuItem.getName() + ", ");
-        System.out.print(menuItem.getPrice() + " -- ");
-        System.out.println(menuItem.getDescription());
-      }
+  private void printMenu(Iterator iterator) {
+    while (iterator.hasNext()) {
+      MenuItem menuItem = (MenuItem) iterator.next();
+      System.out.print(menuItem.getName() + ", ");
+      System.out.print(menuItem.getPrice() + " -- ");
+      System.out.println(menuItem.getDescription());
     }
+  }
 
 }

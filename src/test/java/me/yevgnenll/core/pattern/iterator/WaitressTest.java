@@ -2,6 +2,9 @@ package me.yevgnenll.core.pattern.iterator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -15,7 +18,9 @@ class WaitressTest {
     DinerMenu dinerMenu = new DinerMenu();
     CafeMenu cafeMenu = new CafeMenu();
 
-    Waitress waitress = new Waitress(pancakeHouseMenu, dinerMenu, cafeMenu);
+    List<Menu> menuList = Arrays.asList(pancakeHouseMenu, dinerMenu, cafeMenu);
+
+    Waitress waitress = new Waitress(menuList);
 
     waitress.printMenu();
   }

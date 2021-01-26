@@ -5,7 +5,8 @@ import lombok.Getter;
 import java.util.Iterator;
 
 @Getter
-public class DinerMenu {
+public class DinerMenu implements Menu {
+
     private static final int MAX_ITEMS = 6;
     private int numberOfItems = 0;
     private MenuItem[] menuItems;
@@ -40,6 +41,7 @@ public class DinerMenu {
         }
     }
 
+    @Override
     public Iterator<MenuItem> createIterator() {
         return new DinerMenuIterator<>(menuItems);
     }

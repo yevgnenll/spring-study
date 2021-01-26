@@ -6,8 +6,9 @@ import java.util.Iterator;
 
 @AllArgsConstructor
 public class Waitress {
-    private PancakeHouseMenu pancakeHouseMenu;
-    private DinerMenu dinerMenu;
+
+    private Menu pancakeHouseMenu;
+    private Menu dinerMenu;
 
     public void printMenu() {
 

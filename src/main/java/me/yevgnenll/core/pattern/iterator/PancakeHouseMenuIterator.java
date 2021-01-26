@@ -14,7 +14,7 @@ public class PancakeHouseMenuIterator <T extends MenuItem> implements Iterator<T
 
     @Override
     public boolean hasNext() {
-        return position >= breakfasts.size();
+        return position < breakfasts.size();
     }
 
     @Override

@@ -23,4 +23,11 @@ public class PancakeHouseMenuIterator <T extends MenuItem> implements Iterator<T
       position = position + 1;
       return object;
     }
+
+  @Override
+  public void remove() {
+    if (position <= 0)
+      throw new IllegalStateException("next를 한번도 하지 않고 실행할 수 없습니다");
+    breakfasts.remove(position);
+  }
 }

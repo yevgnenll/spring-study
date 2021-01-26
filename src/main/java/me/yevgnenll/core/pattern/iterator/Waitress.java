@@ -9,16 +9,20 @@ public class Waitress {
 
     private Menu pancakeHouseMenu;
     private Menu dinerMenu;
+    private Menu caffeMenu;
 
     public void printMenu() {
 
       Iterator<MenuItem> pancakeIterator = pancakeHouseMenu.createIterator();
       Iterator<MenuItem> dinerIterator = dinerMenu.createIterator();
+      Iterator<MenuItem> dinnerIterator = caffeMenu.createIterator();
 
       System.out.println("MENU\n----\nBREAKFAST");
       printMenu(pancakeIterator);
       System.out.println("\nLUNCH");
       printMenu(dinerIterator);
+      System.out.println("\nDinner");
+      printMenu(dinnerIterator);
     }
 
     private void printMenu(Iterator iterator) {

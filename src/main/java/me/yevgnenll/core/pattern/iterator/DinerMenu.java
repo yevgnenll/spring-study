@@ -2,6 +2,8 @@ package me.yevgnenll.core.pattern.iterator;
 
 import lombok.Getter;
 
+import java.util.Iterator;
+
 @Getter
 public class DinerMenu {
     private static final int MAX_ITEMS = 6;
@@ -37,4 +39,9 @@ public class DinerMenu {
             numberOfItems = numberOfItems + 1;
         }
     }
+
+    public Iterator<MenuItem> createIterator() {
+        return new DinerMenuIterator<>(menuItems);
+    }
+
 }

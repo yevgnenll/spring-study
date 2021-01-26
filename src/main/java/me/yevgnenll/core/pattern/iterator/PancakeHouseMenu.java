@@ -3,6 +3,7 @@ package me.yevgnenll.core.pattern.iterator;
 import lombok.Getter;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 @Getter
@@ -37,6 +38,10 @@ public class PancakeHouseMenu {
                         boolean vegetarian, double price) {
         MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
         menuItems.add(menuItem);
+    }
+
+    public Iterator<MenuItem> createIterator() {
+        return new PancakeHouseMenuIterator<>(menuItems);
     }
 
     public String toString() {
